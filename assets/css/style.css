@@ -14,6 +14,8 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
+    background-color: oklch(0.95 0 0);
+
 }
 
 a {
@@ -505,6 +507,158 @@ section {
   background-color: #149ddd;
 }
 
+/* Skill badge styles for the Skills cards */
+.skill-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, #f7fbff 0%, #e6f2ff 100%);
+  color: #0b3b66;
+  padding: 7px 12px;
+  border-radius: 999px;
+  margin: 6px 8px 6px 0;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 10px rgba(11,59,102,0.06);
+  border: 1px solid rgba(11,59,102,0.06);
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+
+/* Optionally darker badge for 'technical' group — can be applied via HTML class 'skill-badge tech' */
+.skill-badge.tech {
+  background: linear-gradient(90deg,#f0fff6 0%,#e6fff0 100%);
+  color: #0f4d2f;
+  box-shadow: 0 4px 10px rgba(15,77,47,0.06);
+  border: 1px solid rgba(15,77,47,0.06);
+}
+
+/* Color variants for individual skills (defined to ensure classes like .sk-red apply) */
+.sk-red {
+  background: linear-gradient(90deg,#fff5f5 0%,#ffecec 100%);
+  color: #6a1212;
+  border: 1px solid rgba(106,18,18,0.06);
+}
+.sk-green {
+  background: linear-gradient(90deg,#f3fff6 0%,#e6fff0 100%);
+  color: #0b5a35;
+  border: 1px solid rgba(11,90,53,0.06);
+}
+.sk-orange {
+  background: linear-gradient(90deg,#fff8f0 0%,#fff0e0 100%);
+  color: #67320b;
+  border: 1px solid rgba(103,50,11,0.06);
+}
+.sk-gray {
+  background: linear-gradient(90deg,#f6f7f9 0%,#eef0f3 100%);
+  color: #39414a;
+  border: 1px solid rgba(57,65,74,0.04);
+}
+.sk-blue {
+  background: linear-gradient(90deg,#eef6ff 0%,#dff0ff 100%);
+  color: #08345a;
+  border: 1px solid rgba(8,52,90,0.08);
+}
+.sk-yellow {
+  background: linear-gradient(90deg,#fffdf2 0%,#fff7d9 100%);
+  color: #735700;
+  border: 1px solid rgba(115,87,0,0.06);
+}
+.sk-purple {
+  background: linear-gradient(90deg,#f8f6ff 0%,#efeaff 100%);
+  color: #3b1960;
+  border: 1px solid rgba(59,25,96,0.06);
+}
+.sk-teal {
+  background: linear-gradient(90deg,#f0fbf9 0%,#e6fbf6 100%);
+  color: #06504a;
+  border: 1px solid rgba(6,80,74,0.08);
+}
+
+.skill-badge:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(11,59,102,0.12);
+}
+
+    .gallery-container {
+      position: relative;
+      max-width: 900px;
+      margin: 2rem auto;
+    }
+
+    .gallery-wrapper {
+      overflow: hidden;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
+    }
+
+    .gallery-scroll {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE/Edge */
+    }
+
+    .gallery-scroll::-webkit-scrollbar {
+      display: none; /* Chrome/Safari/Opera */
+    }
+
+    .gallery-item {
+      flex: 0 0 100%;
+      scroll-snap-align: start;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .gallery-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid #dee2e6;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .gallery-btn:hover {
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transform: translateY(-50%) scale(1.05);
+    }
+
+    .gallery-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    .gallery-btn:disabled:hover {
+      transform: translateY(-50%) scale(1);
+    }
+
+    .gallery-btn-prev {
+      left: -24px;
+    }
+
+    .gallery-btn-next {
+      right: -24px;
+    }
+
+    .gallery-indicators {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 1rem;
+    }
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/

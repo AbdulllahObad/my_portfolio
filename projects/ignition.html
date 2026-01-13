@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Events App — Project</title>
+  <link href="../assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+  <main class="container py-5">
+
+    <a href="../index.html" class="btn btn-outline-secondary mb-4">← Back to portfolio</a>
+    <h1>Water Treatment Plant - Ignition</h1>
+    <div class="project-content bg-white p-4 rounded shadow-sm mx-auto" style="max-width:1100px;">
+      <img src="../assets/img/bg/waterArchtecture.svg" alt="Water Treatement Plant" class="img-fluid mb-4 d-block mx-auto project-hero-img p-10 bg-white rounded shadow-sm" style="max-width:1000px;width:100%;">
+
+       <h3>Project Overview</h3>
+       <p>
+        I implemented this project after completing the training provided by Inductive University to gain hands-on experience with Ignition, OPC UA, and industrial automation concepts.
+       </p>
+      
+      <h3>What does this project simulate?</h3>
+      <p>
+        This project simulates a full water treatment plant process, from raw water intake to treated water distribution. It uses Python to generate real-time process data via OPC UA and Ignition by Inductive Automation to visualize and control the system. The simulation demonstrates 
+        how industrial automation systems operate, providing hands-on experience with real-time monitoring, SCADA visualization, and rapid prototyping of control strategies.
+      </p>
+      <h3> Why simulate?</h3>
+      <p>
+        Real industrial automation systems often have limited access to live process data, which can make learning and prototyping challenging. By creating a simulated water treatment plant, I was able to experiment with Ignition’s capabilities,such as <strong>dashboards</strong>, <strong>alarms</strong>, and <strong>historical trends</strong>, using realistic, dynamic data in a safe, hands-on environment.
+      </p>  
+    </div>
+       <!-- Scrollable Image Gallery -->
+    <div class="gallery-container">
+      <button class="gallery-btn gallery-btn-prev" id="prevBtn" onclick="scrollGallery(-1)">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+
+      <div class="gallery-wrapper">
+        <div class="gallery-scroll" id="galleryScroll">
+          <div class="gallery-item">
+            <img src="../assets/img/bg/OverviewPage.png" alt="Dashboard View">
+          </div>
+         
+          <div class="gallery-item">
+            <img src="../assets/img/bg/Water_treatement.png" alt="Alarms View">
+          </div>
+           <div class="gallery-item">
+            <img src="../assets/img/bg/serverScript_image.png" alt="Process Flow">
+          </div>
+        </div>
+      </div>
+
+      <button class="gallery-btn gallery-btn-next" id="nextBtn" onclick="scrollGallery(1)">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+
+      <div class="gallery-indicators" id="indicators"></div>
+    </div>
+
+    <div class="project-content bg-white p-4 rounded shadow-sm mx-auto" style="max-width:1100px;">
+      <h3>How It Works?</h3>
+      <p>The Python program simulates a real water treatment plant and generates realistic sensor data for each stage of the process.</p>
+
+      <div class="how-it-works ps-3">
+        <ul class="list-unstyled mt-3">
+          <li class="mb-2"><strong>Filtration:</strong> Pressure readings and filter cleaning status.</li>
+          <li class="mb-2"><strong>Raw water intake:</strong> Water flow, temperature, and clarity.</li>
+          <li class="mb-2"><strong>Chemical treatment:</strong> Chlorine levels, pH balance, and chemical tank levels.</li>
+          <li class="mb-2"><strong>Clean water storage:</strong> Tank fullness, water temperature, and overflow warnings.</li>
+          <li class="mb-2"><strong>Distribution:</strong> Pump on/off status, water pressure in different zones, and backup power status.</li>
+        </ul>
+      </div>
+      <h3>What's generating the data behind the scenes?</h3>
+      <p>
+        A Python script running as an OPC UA server. 
+        It creates realistic, time-varying data for all the process variables—mimicking what real sensors and equipment would send. This gives the Ignition system live data to work with, making the simulation feel like a real plant in operation.
+      </p>
+
+    </div>
+<br>
+    <div class="project-content bg-white p-4 rounded shadow-sm mx-auto" style="max-width:1100px;">
+      <h3>Download Project Files</h3>
+      <p class="text-muted mb-4">Get the source code and documentation for this project</p>
+      <!-- Python OPC UA Server -->
+        <div class="d-flex align-items-center gap-3 p-3 border rounded mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="text-primary" viewBox="0 0 16 16">
+            <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+          </svg>
+          <div class="flex-grow-1">
+            <h6 class="mb-0">Python OPC UA Server</h6>
+            <small class="text-muted">Simulation script for generating plant data</small>
+          </div>
+          <a href="../assets/files/server.py" class="btn btn-sm btn-outline-primary" download>Download</a>
+        </div>
+        <!-- Ignition Project -->
+        <div class="d-flex align-items-center gap-3 p-3 border rounded mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="text-success" viewBox="0 0 16 16">
+            <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+          </svg>
+          <div class="flex-grow-1">
+            <h6 class="mb-0">Ignition Project Export</h6>
+            <small class="text-muted">Complete SCADA project with all views and tags</small>
+          </div>
+          <a href="../assets/files/WaterTreatmentPlant_2026-01-04_1903.zip" class="btn btn-sm btn-outline-success" download>Download</a>
+        </div>
+    </div>
+        <!-- Footer -->
+        <footer class="text-center text-muted py-4 mt-5">
+          <hr class="mb-3" style="max-width:900px; margin: 0 auto;">
+          <p class="mb-0">© 2026 — Abdullah Obad</p>
+        </footer>
+  </main>
+
+<script>
+  const galleryScroll = document.getElementById('galleryScroll');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const indicatorsContainer = document.getElementById('indicators');
+  const totalImages = 3;
+  let currentIndex = 0;
+
+  // Create indicators
+  for (let i = 0; i < totalImages; i++) {
+    const indicator = document.createElement('div');
+    indicator.className = 'indicator';
+    if (i === 0) indicator.classList.add('active');
+    indicator.onclick = () => scrollToIndex(i);
+    indicatorsContainer.appendChild(indicator);
+  }
+
+  function scrollGallery(direction) {
+    const scrollAmount = galleryScroll.clientWidth;
+    galleryScroll.scrollBy({
+      left: direction * scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+
+  function scrollToIndex(index) {
+    const scrollAmount = galleryScroll.clientWidth * index;
+    galleryScroll.scrollTo({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+
+  function updateButtons() {
+    const scrollLeft = galleryScroll.scrollLeft;
+    const maxScroll = galleryScroll.scrollWidth - galleryScroll.clientWidth;
+    
+    currentIndex = Math.round(scrollLeft / galleryScroll.clientWidth);
+    
+    // Update buttons
+    prevBtn.disabled = scrollLeft <= 0;
+    nextBtn.disabled = scrollLeft >= maxScroll - 5;
+    
+    // Update indicators
+    const indicators = indicatorsContainer.querySelectorAll('.indicator');
+    indicators.forEach((indicator, index) => {
+      indicator.classList.toggle('active', index === currentIndex);
+    });
+  }
+
+  // Update buttons on scroll
+  galleryScroll.addEventListener('scroll', updateButtons);
+  
+  // Initial update
+  updateButtons();
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') scrollGallery(-1);
+    if (e.key === 'ArrowRight') scrollGallery(1);
+  });
+</script>
+  </body>
+  </html>
